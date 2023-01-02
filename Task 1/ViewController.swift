@@ -10,22 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let currentAlpha: CGFloat = 0.0
     
     @IBOutlet var redColor: UIView!
     @IBOutlet var yellowColor: UIView!
     @IBOutlet var blueColor: UIView!
+    
     @IBOutlet var startButton: UIButton!
+    
+    let currentAlpha: CGFloat = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         redColor.alpha = currentAlpha
         yellowColor.alpha = currentAlpha
         blueColor.alpha = currentAlpha
         startButton.layer.cornerRadius = 8
         
-        
+
+        redColor.layer.cornerRadius = redColor.frame.width / 2
+        yellowColor.layer.cornerRadius = redColor.frame.width / 2
+        blueColor.layer.cornerRadius = redColor.frame.width / 2
     }
     
     @IBAction func buttonClick(_ sender: UIButton) {
