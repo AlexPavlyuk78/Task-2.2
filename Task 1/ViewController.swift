@@ -28,10 +28,18 @@ class ViewController: UIViewController {
         blueColor.alpha = currentAlpha
         startButton.layer.cornerRadius = 8
         
-
+        print("Size of sides in method viewDidLoad: \(redColor.frame.height)")
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        
         redColor.layer.cornerRadius = redColor.frame.width / 2
         yellowColor.layer.cornerRadius = redColor.frame.width / 2
         blueColor.layer.cornerRadius = redColor.frame.width / 2
+        
+        print("Size of sides in method viewDidLoad: \(redColor.frame.height)")
+        
     }
     
     @IBAction func buttonClick(_ sender: UIButton) {
